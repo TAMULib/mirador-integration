@@ -11,7 +11,7 @@ const config = {
   windows: [{
     imageToolsEnabled: true,
     imageToolsOpen: true,
-    defaultView: gallery,
+    defaultView: 'gallery',
     manifestId: urlParams.get('manifest'),
   }],
   theme: {
