@@ -1,12 +1,17 @@
 import Mirador from 'mirador/dist/es/src/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
 
+// grab the manifest URL if passed - DCH
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+//
+
 const config = {
-  id: 'demo',
+  id: 'tamu_mirador',
   windows: [{
     imageToolsEnabled: true,
     imageToolsOpen: true,
-    manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest',
+    manifestId: urlParams.get('manifest'),
   }],
   theme: {
     palette: {
