@@ -11,7 +11,7 @@ const config = {
   windows: [{
     imageToolsEnabled: true,
     imageToolsOpen: true,
-    defaultView: 'gallery',
+    defaultView: 'single',
     manifestId: urlParams.get('manifest'),
   }],
   theme: {
@@ -21,6 +21,12 @@ const config = {
       },
     },
   },
+  thumbnailNavigation: {
+    defaultPosition: 'far-bottom', // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
+    displaySettings: true, // Display the settings for this in WindowTopMenu
+    height: 130, // height of entire ThumbnailNavigation area when position is "far-bottom"
+    width: 100, // width of one canvas (doubled for book view) in ThumbnailNavigation area when position is "far-right"
+  },  
 };
 
 Mirador.viewer(config, [
