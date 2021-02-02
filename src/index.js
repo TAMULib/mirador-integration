@@ -41,7 +41,7 @@ const urlParams = new URLSearchParams(queryString);
 	console.log('canvas', var_canvas);
 	console.log('thumbnailnavigation', '(off, far-bottom, far-right) ' + var_thumbnailnavigation);
 	console.log('defaultview', '(single, book, gallery) ' + var_defaultview);
-	console.log('selectedtheme', (light, dark) ' + var_selectedtheme);
+	console.log('selectedtheme', '(light, dark) ' + var_selectedtheme);
 //
 
 const config = {
