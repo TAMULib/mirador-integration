@@ -20,7 +20,7 @@ const urlParams = new URLSearchParams(queryString);
   }
 
   if (urlParams.has('defaultview')) {
-	var var_defaultview = urlParams.get('defaultView');
+	var var_defaultview = urlParams.get('defaultview');
   } else {
 	var var_defaultview = "single";
   }
