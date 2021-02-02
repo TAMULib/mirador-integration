@@ -29,13 +29,19 @@ const urlParams = new URLSearchParams(queryString);
 	var var_thumbnailnavigation = urlParams.get('thumbnailnavigation');
   } else {
 	var var_thumbnailnavigation = "far-bottom";
-  }  
+  }
+
+  if (urlParams.has('selectedtheme')) {
+	var var_selectedtheme = urlParams.get('selectedtheme');
+  } else {
+	var var_selectedtheme = "light";
+  }    
 
 	console.log('manifest', var_manifest);
 	console.log('canvas', var_canvas);
 	console.log('thumbnailnavigation', '(off, far-bottom, far-right) ' + var_thumbnailnavigation);
 	console.log('defaultview', '(single, book, gallery) ' + var_defaultview);
-
+	console.log('selectedtheme', var_selectedtheme);
 //
 
 const config = {
@@ -47,6 +53,7 @@ const config = {
     manifestId: var_manifest,
 	canvasId: var_canvas,
   }],
+  selectedTheme: var_selectedtheme,
   theme: {
     palette: {
       primary: {
