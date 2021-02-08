@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@blueprintjs/core": "^3.38.2",
     "css-loader": "^3.6.0",
     "mirador": "^3.0.0",
+    "mirador-annotations": "^0.3.1",	
     "mirador-image-tools": "^0.10.0",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.1",
