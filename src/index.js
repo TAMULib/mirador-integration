@@ -1,6 +1,6 @@
 import Mirador from 'mirador/dist/es/src/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
-import annotationPlugins from 'mirador-annotations';
+import miradorAnnotationPlugins from 'mirador-annotations';
 import LocalStorageAdapter from 'mirador-annotations/lib/LocalStorageAdapter';
 
 // grab the manifest URL if passed - DCH
@@ -47,6 +47,10 @@ const urlParams = new URLSearchParams(queryString);
 //
 
 const config = {
+  annotation: {
+    adapter: (canvasId) => new LocalStorageAdapter(`localStorage://?canvasId=${canvasId}`),
+    // adapter: (canvasId) => new AnnototAdapter(canvasId, endpointUrl),
+  },	
   id: 'tamu_mirador',
   windows: [{
     imageToolsEnabled: true,
@@ -73,5 +77,5 @@ const config = {
 
 Mirador.viewer(config, [
   ...miradorImageToolsPlugin,
-  ...annotationPlugins,
+  ...miradorAnnotationPlugins,
 ]);
