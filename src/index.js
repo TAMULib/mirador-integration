@@ -1,6 +1,7 @@
 import Mirador from 'mirador/dist/es/src/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
-import { miradorAnnotationPlugin } from 'mirador-annotations';
+import annotationPlugins from 'mirador-annotations';
+import LocalStorageAdapter from 'mirador-annotations/lib/LocalStorageAdapter';
 
 // grab the manifest URL if passed - DCH
 // https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
@@ -72,4 +73,5 @@ const config = {
 
 Mirador.viewer(config, [
   ...miradorImageToolsPlugin,
+  ...annotationPlugins,
 ]);
