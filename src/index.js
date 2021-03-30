@@ -107,7 +107,9 @@ class SimpleAnnotationServerV2Adapter {
       }
 
       if (v3anno.target.source) {
-        v2anno.on.full = v3anno.target.source.id ? v3anno.target.source.id : v3anno.target.source;
+        v2anno.on.full = v3anno.target.source.id
+          ? v3anno.target.source.id
+          : v3anno.target.source;
         if (v3anno.target.source.partOf) {
           v2anno.on.within = {
             '@id': v3anno.target.source.partOf.id 
@@ -320,5 +322,5 @@ const config = {
 
 Mirador.viewer(config, [
   ...miradorImageToolsPlugin,
-  ...miradorAnnotationPlugins,
+  //...miradorAnnotationPlugins,
 ]);
