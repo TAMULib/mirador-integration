@@ -41,43 +41,67 @@ const urlParams = new URLSearchParams(queryString);
 	var var_selectedtheme = "light";
   }    
 
-	console.log('manifest', var_manifest);
+		console.log('manifest', var_manifest);
 	console.log('canvas', var_canvas);
 	console.log('thumbnailnavigation', '(off, far-bottom, far-right) ' + var_thumbnailnavigation);
 	console.log('defaultview', '(single, book, gallery) ' + var_defaultview);
 	console.log('selectedtheme', '(light, dark) ' + var_selectedtheme);
 //
 
-const config = {
-  id: 'tamu_mirador',
-  windows: [{
-    imageToolsEnabled: true,
-    imageToolsOpen: true,
-    defaultView: var_defaultview,
-    manifestId: var_manifest,
-	canvasId: var_canvas,
-  }],
-  annotation: {
-	//adapter: (canvasId),
-  },
-  selectedTheme: var_selectedtheme,
-  theme: {
-    palette: {
-      primary: {
-        main: '#1967d2',
-      },
-    },
-  },
-  thumbnailNavigation: {
-    defaultPosition: var_thumbnailnavigation, // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
-    displaySettings: true, // Display the settings for this in WindowTopMenu
-    height: 130, // height of entire ThumbnailNavigation area when position is "far-bottom"
-    width: 100, // width of one canvas (doubled for book view) in ThumbnailNavigation area when position is "far-right"
-  },  
-};
+if ( var_manifest.length > 0 ) {
+	var config = {
+	  id: 'tamu_mirador',
+	  windows: [{
+	    imageToolsEnabled: true,
+	    imageToolsOpen: true,
+	    defaultView: var_defaultview,
+	    manifestId: var_manifest,
+		canvasId: var_canvas,
+	  }],
+	  annotation: {
+		//adapter: (canvasId),
+	  },
+	  selectedTheme: var_selectedtheme,
+	  theme: {
+		palette: {
+		  primary: {
+			main: '#1967d2',
+		  },
+		},
+	  },
+	  thumbnailNavigation: {
+		defaultPosition: var_thumbnailnavigation, // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
+		displaySettings: true, // Display the settings for this in WindowTopMenu
+		height: 130, // height of entire ThumbnailNavigation area when position is "far-bottom"
+		width: 100, // width of one canvas (doubled for book view) in ThumbnailNavigation area when position is "far-right"
+	  },
+	};
+} else {
+	var config = {
+	  id: 'tamu_mirador',
+	  annotation: {
+		//adapter: (canvasId),
+	  },
+	  selectedTheme: var_selectedtheme,
+	  theme: {
+		palette: {
+		  primary: {
+			main: '#1967d2',
+		  },
+		},
+	  },
+	  thumbnailNavigation: {
+		defaultPosition: var_thumbnailnavigation, // Which position for the thumbnail navigation to be be displayed. Other possible values are "far-bottom" or "far-right"
+		displaySettings: true, // Display the settings for this in WindowTopMenu
+		height: 130, // height of entire ThumbnailNavigation area when position is "far-bottom"
+		width: 100, // width of one canvas (doubled for book view) in ThumbnailNavigation area when position is "far-right"
+	  },
+	};
+
+}
 
 Mirador.viewer(config, [
   ...miradorImageToolsPlugin,
-//...miradorAnnotationPlugins,
-  ...miradorDownloadPlugins,  
+  //...miradorAnnotationPlugins,
+  ...miradorDownloadPlugins,    
 ]);
