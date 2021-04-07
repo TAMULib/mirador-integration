@@ -2,6 +2,7 @@ import Mirador from 'mirador/dist/es/src/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
 import miradorAnnotationPlugins from 'mirador-annotations';
 import LocalStorageAdapter from 'mirador-annotations/lib/LocalStorageAdapter';
+import miradorDownloadPlugins from 'mirador-dl-plugin';
 
 /** */
 class SimpleAnnotationServerV2Adapter {
