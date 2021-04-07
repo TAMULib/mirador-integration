@@ -348,4 +348,5 @@ if ( var_manifest.length > 0 ) {
 Mirador.viewer(config, [
   ...miradorImageToolsPlugin,
   //...miradorAnnotationPlugins,
+  ...miradorDownloadPlugins,    
 ]);
