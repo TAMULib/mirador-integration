@@ -2,6 +2,7 @@ import Mirador from 'mirador/dist/es/src/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
 import miradorAnnotationPlugins from 'mirador-annotations';
 import LocalStorageAdapter from 'mirador-annotations/lib/LocalStorageAdapter';
+import miradorDownloadPlugins from 'mirador-dl-plugin';
 import SimpleAnnotationServerV2Adapter from 'mirador-annotations/lib/SimpleAnnotationServerV2Adapter';
 
 // grab the manifest URL if passed - DCH
@@ -78,4 +79,5 @@ const config = {
 Mirador.viewer(config, [
   ...miradorImageToolsPlugin,
 //...miradorAnnotationPlugins,
+  ...miradorDownloadPlugins,  
 ]);
