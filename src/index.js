@@ -296,6 +296,9 @@ const urlParams = new URLSearchParams(queryString);
 if ( var_manifest.length > 0 ) {
 	var config = {
 	  id: 'tamu_mirador',
+	  miradorDownloadPlugin: {
+		restrictDownloadOnSizeDefinition: true,
+	  },	
 	  windows: [{
 	    imageToolsEnabled: true,
 	    imageToolsOpen: true,
@@ -324,6 +327,9 @@ if ( var_manifest.length > 0 ) {
 } else {
 	var config = {
 	  id: 'tamu_mirador',
+	  miradorDownloadPlugin: {
+		restrictDownloadOnSizeDefinition: true,
+	  },	
 	  annotation: {
 		//adapter: (canvasId),
 	  },
