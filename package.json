@@ -13,7 +13,7 @@
   "dependencies": {
     "@blueprintjs/core": "^3.38.2",
     "css-loader": "^3.6.0",
-    "tamu-mirador": "^3.0.0",
+    "mirador": "^3.0.0",
     "mirador-image-tools": "^0.10.0",
     "tamu-mirador-annotations": "^0.3.3",
     "tamu-mirador-dl-plugin": "^0.13.1",
