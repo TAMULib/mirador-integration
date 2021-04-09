@@ -1,9 +1,10 @@
 import Mirador from 'mirador/dist/es/src/index';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
 import miradorDownloadPlugins from 'tamu-mirador-dl-plugin';
-import miradorAnnotationPlugins from 'tamu-mirador-annotations';
-import LocalStorageAdapter from 'tamu-mirador-annotations/lib/LocalStorageAdapter';
-import SimpleAnnotationServerV2Adapter from 'tamu-mirador-annotations/lib/SimpleAnnotationServerV2Adapter';
+
+// import miradorAnnotationPlugins from 'tamu-mirador-annotations';
+// import LocalStorageAdapter from 'tamu-mirador-annotations/lib/LocalStorageAdapter';
+// import SimpleAnnotationServerV2Adapter from 'tamu-mirador-annotations/lib/SimpleAnnotationServerV2Adapter';
 
 // grab the manifest URL if passed - DCH
 // https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
